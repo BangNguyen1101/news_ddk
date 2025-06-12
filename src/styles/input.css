@@ -24,6 +24,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1609,6 +1610,7 @@ h1.c-logo {
     font-size: 16px;
   }
   .c-template-grid .b-grid .b-grid__title a {
+    color: #000;
     transition: all 0.2s ease;
   }
   .c-template-grid .b-grid .b-grid__title a:hover {
@@ -2306,5 +2308,37 @@ h1.c-logo {
     line-height: 48px;
     right: 30px;
     bottom: 40px;
+  }
+}
+
+/* Đảm bảo container chính căn giữa */
+.container,
+.c-container-wrapper,
+.l-content,
+.c-head-list,
+.c-head-list__bottom,
+.c-box-list {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+/* Khi màn hình nhỏ, các khối chuyển dọc và căn giữa */
+@media (max-width: 991px) {
+  .c-head-list,
+  .c-head-list__bottom,
+  .c-box-list {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .c-head-list__left,
+  .c-head-list__right,
+  .c-head-list__bottom .c-template-grid ul li,
+  .c-box-list__col {
+    width: 100% !important;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
